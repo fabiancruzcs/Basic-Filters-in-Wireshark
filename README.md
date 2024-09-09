@@ -17,10 +17,9 @@ In this lab, I used Wireshark on Ubuntu Server 20.04 to analyze network traffic.
 
 ## Task 1: Identifying Color Codes
 
-****Walk-Through:****
-
 <p align="center">
-1. Observe the packets highlighted in black. These usually indicate malformed packets or potential issues like checksum errors.
+1. Observe the packets highlighted in black. These usually indicate malformed packets or potential issues like checksum errors. </p>
+<p align="center">
 <img src="https://imgur.com/ogXBYsm.png" height="50%" width="70%" alt="PCAP data"/>
 
 
