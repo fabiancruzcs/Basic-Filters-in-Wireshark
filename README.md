@@ -7,3 +7,20 @@ In this lab, I used Wireshark on Ubuntu Server 20.04 to analyze network traffic.
 |-----------------------------------------|---------------------------------------------------------------------------------------------------|
 | ubuntu server 20.04  | A Linux OS for server management and networking tasks.    |
 | Wireshark                                 | A network protocol analyzer for capturing and inspecting traffic.           |
+| PCAP file                                 | A binary file format that stores network traffic data in a structured manner.          |
+
+## Table of Contents
+1. Task 1: [Identifying Color Codes](https://github.com/fabiancruzcs/Using-Basic-Filters-in-Wireshark/edit/main/README.md#task-1-identifying-color-codes)
+2. Task 2: Analyzing Traffic by Protocol
+3. Task 3: Applying Basic Filters
+4. Task 4: Filtering Important Data vs. Noise
+
+## Task 1: Identifying Color Codes
+
+****Walk-Through:****
+
+<p align="center">
+1. Observe the packets highlighted in black. These usually indicate malformed packets or potential issues like checksum errors.
+<img src="https://imgur.com/ogXBYsm.png" height="50%" width="70%" alt="PCAP data"/>
+
+
