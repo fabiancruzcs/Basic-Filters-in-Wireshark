@@ -26,3 +26,5 @@ In this lab, I used Wireshark on Ubuntu Server 20.04 to analyze network traffic.
 - **Checksum errors -** The packet’s data integrity check failed, meaning it might be corrupted or altered.
 - **Malformed data -** The packet’s structure doesn’t match protocol standards, possibly due to corruption or improper construction.
 - **Reassembly issues -** The packet is part of a fragmented message, and Wireshark couldn’t reassemble all the pieces correctly.
+
+In this case, I received an ICMP error message from the network stating "Destination/Port unreachable" which means the network or host informs you that the packet could not be delivered to the destination IP or port. This is normal behavior when there's a **routing issue**, a **firewall blocking the traffic**, or the service at the destination **port isn't available**.
