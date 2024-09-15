@@ -11,16 +11,16 @@ In this lab, I used Wireshark on Ubuntu Server 20.04 to analyze network traffic.
 
 ## Table of Contents
 1. Task 1: [Identifying Color Codes](https://github.com/fabiancruzcs/Using-Basic-Filters-in-Wireshark/edit/main/README.md#task-1-identifying-color-codes)
-2. Task 2: Analyzing Traffic by Protocol
-3. Task 3: Applying Basic Filters
-4. Task 4: Filtering Important Data vs. Noise
+2. Task 2: Packet Search
+3. Task 3: Packet Lengths
+4. Task 4: Capturing traffic from an IP address
 
 ## Task 1: Identifying Color Codes
 
 <p align="center">
 1. The packets highlighted in black, usually indicate malformed packets or potential issues like checksum errors. </p>
 <p align="center">
-<img src="https://imgur.com/ogXBYsm.png" height="50%" width="70%" alt="PCAP data"/>
+<img src="https://imgur.com/ogXBYsm.png" height="70%" width="90%" alt="PCAP data"/>
 
 ### Key learnings:
 - **Checksum errors -** The packet’s data integrity check failed, meaning it might be corrupted or altered.
@@ -28,3 +28,42 @@ In this lab, I used Wireshark on Ubuntu Server 20.04 to analyze network traffic.
 - **Reassembly issues -** The packet is part of a fragmented message, and Wireshark couldn’t reassemble all the pieces correctly.
 
 In this case, I received an ICMP error message from the network stating "Destination/Port unreachable" which means the network or host informs you that the packet could not be delivered to the destination IP or port. This is normal behavior when there's a **routing issue**, a **firewall blocking the traffic**, or the service at the destination **port isn't available**.
+
+## Task 2: Packet Search
+
+Used `Ctrl + F` to search for packets filtered by **string category**, such as host information.
+
+<p align="center">
+1. Zenoss.services.dom host </p>
+<p align="center">
+<img src="https://imgur.com/9SifcbB.png" height="70%" width="90%" alt="search"/>
+
+## Task 2: Packet Lengths
+
+Average packet length of the entire pcap file.
+
+<p align="center">
+1. Found under the "Statistics" tab on "Packet Lengths" </p>
+<p align="center">
+<img src="https://imgur.com/VjHHbwC.png" height="70%" width="90%" alt="avg"/>
+
+<p align="center">
+2. AVG </p>
+<p align="center">
+<img src="https://imgur.com/kypLWRF.png" height="70%" width="90%" alt="avg"/>
+
+
+## Task 4: Capturing traffic from an IP address
+
+To capture all traffic associated with the IPv4 address **192.168.66.20**, I applied the following filter in Wireshark:
+
+```
+ip.addr == 192.168.66.20
+```
+
+This will display all packets where **192.168.66.20** is either the source or destination. The number of displayed packets is shown in the status bar at the bottom of the Wireshark window.
+
+<p align="center">
+1. traffic capture </p>
+<p align="center">
+<img src="https://imgur.com/7DV6s2G.png" height="70%" width="90%" alt="traffic"/>
