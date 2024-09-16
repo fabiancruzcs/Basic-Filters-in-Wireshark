@@ -11,14 +11,14 @@ In this lab, I used Wireshark on Ubuntu Server 20.04 to analyze network traffic.
 
 ## Table of Contents
 1. Task 1: [Identifying Color Codes](https://github.com/fabiancruzcs/Using-Basic-Filters-in-Wireshark/edit/main/README.md#task-1-identifying-color-codes)
-2. Task 2: Packet Search
-3. Task 3: Packet Lengths
-4. Task 4: Capturing traffic from an IP address
+2. Task 2: [Packet Search](https://github.com/fabiancruzcs/Basic-Filters-in-Wireshark/edit/main/README.md#task-2-packet-search)
+3. Task 3: [Packet Lengths](https://github.com/fabiancruzcs/Basic-Filters-in-Wireshark/edit/main/README.md#task-3-packet-lengths)
+4. Task 4: [Capturing traffic from an IP address](https://github.com/fabiancruzcs/Basic-Filters-in-Wireshark/edit/main/README.md#task-4-capturing-traffic-from-an-ip-address)
 
 ## Task 1: Identifying Color Codes
 
 <p align="center">
-1. The packets highlighted in black, usually indicate malformed packets or potential issues like checksum errors. </p>
+The packets highlighted in black, usually indicate malformed packets or potential issues like checksum errors. </p>
 <p align="center">
 <img src="https://imgur.com/ogXBYsm.png" height="70%" width="90%" alt="PCAP data"/>
 
@@ -34,21 +34,21 @@ In this case, I received an ICMP error message from the network stating "Destina
 Used `Ctrl + F` to search for packets filtered by **string category**, such as host information.
 
 <p align="center">
-1. Zenoss.services.dom host </p>
+Zenoss.services.dom host </p>
 <p align="center">
 <img src="https://imgur.com/9SifcbB.png" height="70%" width="90%" alt="search"/>
 
-## Task 2: Packet Lengths
+## Task 3: Packet Lengths
 
 Average packet length of the entire pcap file.
 
 <p align="center">
-1. Found under the "Statistics" tab on "Packet Lengths" </p>
+Found under the "Statistics" tab on "Packet Lengths" </p>
 <p align="center">
 <img src="https://imgur.com/VjHHbwC.png" height="70%" width="90%" alt="avg"/>
 
 <p align="center">
-2. AVG </p>
+AVG </p>
 <p align="center">
 <img src="https://imgur.com/kypLWRF.png" height="70%" width="90%" alt="avg"/>
 
@@ -64,6 +64,6 @@ ip.addr == 192.168.66.20
 This will display all packets where **192.168.66.20** is either the source or destination. The number of displayed packets is shown in the status bar at the bottom of the Wireshark window.
 
 <p align="center">
-1. traffic capture </p>
+Traffic capture </p>
 <p align="center">
 <img src="https://imgur.com/7DV6s2G.png" height="70%" width="90%" alt="traffic"/>
