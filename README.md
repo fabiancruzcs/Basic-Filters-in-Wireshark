@@ -22,10 +22,6 @@ The packets highlighted in black, usually indicate malformed packets or potentia
 <p align="center">
 <img src="https://imgur.com/ogXBYsm.png" height="70%" width="90%" alt="PCAP data"/>
 
-- **Checksum errors -** The packet’s data integrity check failed, meaning it might be corrupted or altered.
-- **Malformed data -** The packet’s structure doesn’t match protocol standards, possibly due to corruption or improper construction.
-- **Reassembly issues -** The packet is part of a fragmented message, and Wireshark couldn’t reassemble all the pieces correctly.
-
 In this case, I received an ICMP error message from the network stating "Destination/Port unreachable" which means the network or host informs you that the packet could not be delivered to the destination IP or port. This is normal behavior when there's a **routing issue**, a **firewall blocking the traffic**, or the service at the destination **port isn't available**.
 
 ## Task 2: Packet Search
