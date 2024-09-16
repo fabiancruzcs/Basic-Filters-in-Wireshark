@@ -22,7 +22,6 @@ The packets highlighted in black, usually indicate malformed packets or potentia
 <p align="center">
 <img src="https://imgur.com/ogXBYsm.png" height="70%" width="90%" alt="PCAP data"/>
 
-### Key learnings:
 - **Checksum errors -** The packet’s data integrity check failed, meaning it might be corrupted or altered.
 - **Malformed data -** The packet’s structure doesn’t match protocol standards, possibly due to corruption or improper construction.
 - **Reassembly issues -** The packet is part of a fragmented message, and Wireshark couldn’t reassemble all the pieces correctly.
